@@ -1,0 +1,16 @@
+<div class="example-viewport" cdkVirtualScrollingElement>
+  <div class="example-header">Content before</div>
+  <cdk-virtual-scroll-viewport [itemSize]="itemSize" cdkScrollable>
+    <div
+      *cdkVirtualFor="let item of items; let index = index"
+      [ngClass]="getCssClass(index)"
+      id="card-by-id-{{ index }}"
+    >
+      <span *ngIf="item; else loading">{{ item }}</span>
+      <ng-template #loading>Loading...</ng-template>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
+
+<input type="text" [(ngModel)]="targetIndex" />
+<button (click)="scrollToIndex()">Scroll To Index</button>

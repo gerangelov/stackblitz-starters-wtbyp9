@@ -1,0 +1,22 @@
+.example-viewport {
+  flex: 1;
+  width: 400px;
+  min-height: 600px;
+  border: 1px solid black;
+}
+
+.item-card-A {
+  height: 100px;
+  background-color: aliceblue;
+}
+
+.item-card-B {
+  height: 130px;
+  background-color: aqua;
+}
+
+.example-header,
+.example-footer {
+  height: 200px;
+  background: lightgray;
+}
